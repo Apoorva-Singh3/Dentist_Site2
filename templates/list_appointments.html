@@ -1,0 +1,161 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{% block title %}Shree Kalyan Dental Care{% endblock %}</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Add your favicon link here -->
+    <link rel="icon" href="{% static 'website/images/dentist_favicon_1.jpg' %}" type="image/x-icon">
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.1/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/css/bootstrap-datepicker.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/js/bootstrap-datepicker.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,700,900"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'website/fonts/icomoon/style.css'%}"
+    />
+
+    <link rel="stylesheet" href="{% static 'website/css/bootstrap.min.css'%}" />
+    <link
+      rel="stylesheet"
+      href="{% static 'website/css/magnific-popup.css'%}"
+    />
+    <link rel="stylesheet" href="{% static 'website/css/jquery-ui.css'%}" />
+    <link
+      rel="stylesheet"
+      href="{% static 'website/css/owl.carousel.min.css'%}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'website/css/owl.theme.default.min.css'%}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'website/css/bootstrap-datepicker.css'%}"
+    />
+
+    <link
+      rel="stylesheet"
+      href="{% static 'website/fonts/flaticon/font/flaticon.css'%}"
+    />
+
+    <link rel="stylesheet" href="{% static 'website/css/aos.css'%}" />
+
+    <link rel="stylesheet" href="{% static 'website/css/style.css'%}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        @media (max-width: 768px) {
+            /* Adjust for smaller screens */
+            button.btn-primary {
+                width: auto;
+                font-size: 2vw;
+            }
+            input.btn-primary {
+                width: auto;
+                font-size: 2vw;
+            }
+            a.btn-primary {
+                width: auto;
+                font-size: 2vw;
+            }
+        }
+    </style>
+</head>
+<body style="background-color: #ece8d9;">
+<div class="site-section site-block-appointment">
+    <div class="container">
+        <div class="row">            
+            <div class="col-lg-12">
+                <div class="pl-lg-5 ml-lg-5">
+                    <h2 class="site-heading text-black">List Of <strong>Appointment</strong> Records!</h2>
+                </div>                
+                <form method="GET" action="" class="form-inline mb-3" style="background-color: transparent; box-shadow: none;">
+                    <label for="date_filter" class="mr-2">Filter by Date:</label>
+                    <input type="text" id="date_filter" name="date" class="form-control datepicker px-2 mr-2" placeholder="Date of visit">
+                    <input type="submit" value="Apply Filter" class="btn btn-primary">
+                </form>                    
+                <div class="table-container mb-3" style="max-height: 300px; overflow-y: auto;">
+                <table class="table table-bordered p-5 bg-white">
+                   <thead>
+                        <tr>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Gender</th>
+                            <th>Age</th>
+                            <th>Date</th>
+                            <th>Time Slot</th>
+                            <th>Contact Number</th>
+                            <th>Email</th>
+                            <th>Treatment Needed</th>
+                            <th>Notes</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for appointment in appointments %}
+                            <tr>
+                                <td>{{ appointment.first_name }}</td>
+                                <td>{{ appointment.last_name }}</td>
+                                <td>{{ appointment.gender }}</td>
+                                <td>{{ appointment.age }}</td>
+                                <td>{{ appointment.date }}</td>
+                                <td>{{ appointment.time_slot }}</td>
+                                <td>{{ appointment.contact_number }}</td>
+                                <td>{{ appointment.email }}</td>
+                                <td>{{ appointment.treatment_needed }}</td>
+                                <td>{{ appointment.notes }}</td>
+                                <td>
+                                    {% if not appointment.is_cancelled %}
+                                        <a href="{% url 'cancel_appointment' appointment.id %}">
+                                            <i class="fas fa-trash"></i>
+                                        </a>
+                                    {% endif %}
+                                </td>                                    
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table> 
+                </div>             
+                <div>
+                    <a href="{% url 'admin_logout' %}" class="btn btn-primary">Log Out</a>                    
+                    <button onclick="redirectToDashboard()" class="btn btn-primary float-right">Back to Dashboard</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="{% static 'website/js/jquery-migrate-3.0.1.min.js'%}"></script>
+<script src="{% static 'website/js/jquery-ui.js'%}"></script>
+<script src="{% static 'website/js/popper.min.js'%}"></script>
+<script src="{% static 'website/js/bootstrap.min.js'%}"></script>
+<script src="{% static 'website/js/owl.carousel.min.js'%}"></script>
+<script src="{% static 'website/js/jquery.stellar.min.js'%}"></script>
+<script src="{% static 'website/js/jquery.countdown.min.js'%}"></script>
+<script src="{% static 'website/js/jquery.magnific-popup.min.js'%}"></script>
+<script src="{% static 'website/js/bootstrap-datepicker.min.js'%}"></script>
+<script src="{% static 'website/js/aos.js'%}"></script>
+<script src="{% static 'website/js/main.js'%}"></script>
+<script>
+    function redirectToDashboard() {
+        window.location.href = "{% url 'admin_dashboard' %}";
+    }
+</script>
+</body>
+</html>

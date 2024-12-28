@@ -1,0 +1,120 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{% block title %}Shree Kalyan Dental Care{% endblock %}</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Add your favicon link here -->
+    <link rel="icon" href="{% static 'website/images/dentist_favicon_1.jpg' %}" type="image/x-icon">
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.1/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/css/bootstrap-datepicker.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/js/bootstrap-datepicker.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,700,900"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'website/fonts/icomoon/style.css'%}"
+    />
+
+    <link rel="stylesheet" href="{% static 'website/css/bootstrap.min.css'%}" />
+    <link
+      rel="stylesheet"
+      href="{% static 'website/css/magnific-popup.css'%}"
+    />
+    <link rel="stylesheet" href="{% static 'website/css/jquery-ui.css'%}" />
+    <link
+      rel="stylesheet"
+      href="{% static 'website/css/owl.carousel.min.css'%}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'website/css/owl.theme.default.min.css'%}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'website/css/bootstrap-datepicker.css'%}"
+    />
+
+    <link
+      rel="stylesheet"
+      href="{% static 'website/fonts/flaticon/font/flaticon.css'%}"
+    />
+
+    <link rel="stylesheet" href="{% static 'website/css/aos.css'%}" />
+
+    <link rel="stylesheet" href="{% static 'website/css/style.css'%}" />
+</head>
+<body>
+<div class="site-section site-block-appointment" style="padding: 80px 0;">
+  <div class="container" style="max-width: 1170px; margin: 0 auto; padding: 0 15px;">
+      <div class="row">
+          <div class="col-lg-6 mb-5 pl-lg-5 order-1 order-lg-2" style="flex-basis: calc(50% - 30px); margin: 15px;">
+              <div class="pl-lg-5 ml-lg-5">
+                  <h2 class="site-heading text-black" style="font-size: 24px;">Your <strong>Appointment</strong> Has Been Booked Successfully!</h2>
+              </div>
+          </div>
+          <div class="col-lg-6 order-2 order-lg-1 p-5 bg-white" style="padding: 30px !important;">
+              <ul>
+                  <p><strong>First Name:</strong> {{ appointment.first_name }}</p>
+                  <p><strong>Last Name:</strong> {{ appointment.last_name }}</p>
+                  <p><strong>Gender:</strong> {{ appointment.gender }}</p>
+                  <p><strong>Age:</strong> {{ appointment.age }}</p>
+                  <p><strong>Date:</strong> {{ appointment.date }}</p>
+                  <p><strong>Time Slot:</strong> {{ appointment.time_slot }}</p>
+                  <p><strong>Contact Number:</strong> {{ appointment.contact_number }}</p>
+                  <p><strong>Email:</strong> {{ appointment.email }}</p>
+                  <p><strong>Treatment Needed:</strong> {{ appointment.treatment_needed }}</p>
+                  <p><strong>Notes:</strong> {{ appointment.notes }}</p>
+              </ul>
+              <p>This page will be redirected to home in one minute.</p>
+              <a href="{% url 'edit_appointment' appointment.id %}" class="btn btn-primary">Edit</a>
+              <button onclick="redirectToHome()" class="btn btn-primary float-right" style="float: right">Back to Home</button>
+          </div>
+      </div>
+  </div>
+</div>
+
+<script src="{% static 'website/js/jquery-migrate-3.0.1.min.js'%}"></script>
+<script src="{% static 'website/js/jquery-ui.js'%}"></script>
+<script src="{% static 'website/js/popper.min.js'%}"></script>
+<script src="{% static 'website/js/bootstrap.min.js'%}"></script>
+<script src="{% static 'website/js/owl.carousel.min.js'%}"></script>
+<script src="{% static 'website/js/jquery.stellar.min.js'%}"></script>
+<script src="{% static 'website/js/jquery.countdown.min.js'%}"></script>
+<script src="{% static 'website/js/jquery.magnific-popup.min.js'%}"></script>
+<script src="{% static 'website/js/bootstrap-datepicker.min.js'%}"></script>
+<script src="{% static 'website/js/aos.js'%}"></script>
+<script src="{% static 'website/js/main.js'%}"></script>
+<script>
+    
+    function redirectToHomePage() {
+        setTimeout(function () {
+            window.location.href = "/";
+
+        }, 60000); // 60,000 milliseconds = 1 minute
+    }
+
+    function redirectToHome() {
+        window.location.href = "/";
+    }
+
+    window.onload = redirectToHomePage;
+</script>
+</body>
+</html>
+
