@@ -1,14 +1,15 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Shree Kalyan Dental Care</title>
+    <title>{% block title %}Shree Kalyan Dental Care{% endblock %}</title>
     <meta charset="utf-8" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <!-- Add your favicon link here -->
-    <link rel="icon" href="images/dentist_favicon_1.jpg" type="image/x-icon">
+    <link rel="icon" href="{% static 'website/images/dentist_favicon_1.jpg' %}" type="image/x-icon">
     
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
@@ -27,36 +28,36 @@
     />
     <link
       rel="stylesheet"
-      href="fonts/icomoon/style.css"
+      href="{% static 'website/fonts/icomoon/style.css'%}"
     />
 
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="{% static 'website/css/bootstrap.min.css'%}" />
     <link
       rel="stylesheet"
-      href="css/magnific-popup.css"
+      href="{% static 'website/css/magnific-popup.css'%}"
     />
-    <link rel="stylesheet" href="css/jquery-ui.css" />
+    <link rel="stylesheet" href="{% static 'website/css/jquery-ui.css'%}" />
     <link
       rel="stylesheet"
-      href="css/owl.carousel.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="css/owl.theme.default.min.css"
+      href="{% static 'website/css/owl.carousel.min.css'%}"
     />
     <link
       rel="stylesheet"
-      href="css/bootstrap-datepicker.css"
+      href="{% static 'website/css/owl.theme.default.min.css'%}"
     />
-
     <link
       rel="stylesheet"
-      href="fonts/flaticon/font/flaticon.css"
+      href="{% static 'website/css/bootstrap-datepicker.css'%}"
     />
 
-    <link rel="stylesheet" href="css/aos.css" />
+    <link
+      rel="stylesheet"
+      href="{% static 'website/fonts/flaticon/font/flaticon.css'%}"
+    />
 
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="{% static 'website/css/aos.css'%}" />
+
+    <link rel="stylesheet" href="{% static 'website/css/style.css'%}" />
     <style>
       @media (max-width: 768px) {
           /* Adjust for smaller screens */
@@ -79,25 +80,25 @@
                 <div class="col-lg-6 order-2 order-lg-1">
                     <form class="p-5 bg-white">
                         <ol>
-                            <li><a href="list_appointments.html">List of All Appointments</a></li>
-                            <li><a href="list_sayhellos.html">List of All Queries from Patients</a></li>
+                            <li><a href="{% url 'list_appointments' %}">List of All Appointments</a></li>
+                            <li><a href="{% url 'list_sayhellos' %}">List of All Queries from Patients</a></li>
                         </ol>
-                        <a href="admin_logout" class="btn btn-primary">Log Out</a>
+                        <a href="{% url 'admin_logout' %}" class="btn btn-primary">Log Out</a>
                     </form>
                 </div>
             </div>
         </div>
     </div>
-    <script src="js/jquery-migrate-3.0.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.stellar.min.js"></script>
-    <script src="js/jquery.countdown.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/bootstrap-datepicker.min.js"></script>
-    <script src="js/aos.js"></script>
-    <script src="js/jquery-ui.js"></script>
-    <script src="js/main.js"></script>
+    <script src="{% static 'website/js/jquery-migrate-3.0.1.min.js'%}"></script>
+    <script src="{% static 'website/js/jquery-ui.js'%}"></script>
+    <script src="{% static 'website/js/popper.min.js'%}"></script>
+    <script src="{% static 'website/js/bootstrap.min.js'%}"></script>
+    <script src="{% static 'website/js/owl.carousel.min.js'%}"></script>
+    <script src="{% static 'website/js/jquery.stellar.min.js'%}"></script>
+    <script src="{% static 'website/js/jquery.countdown.min.js'%}"></script>
+    <script src="{% static 'website/js/jquery.magnific-popup.min.js'%}"></script>
+    <script src="{% static 'website/js/bootstrap-datepicker.min.js'%}"></script>
+    <script src="{% static 'website/js/aos.js'%}"></script>
+    <script src="{% static 'website/js/main.js'%}"></script>
 </body>
 </html>

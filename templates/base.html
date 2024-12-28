@@ -1,4 +1,3 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,7 +14,7 @@
   </script>
 
   <!-- Primary title block -->
-  <title>{% block title %}Shree Kalyan Dental Care{% endblock %}</title>
+  <title>Shree Kalyan Dental Care</title>
 
   <!-- Meta tags for character encoding and responsive design -->
   <meta charset="utf-8" />
@@ -154,7 +153,7 @@
     </script>
 
   <!-- Add your favicon link here -->
-  <link rel="icon" href="{% static 'website/images/dentist_favicon_1.jpg' %}" type="image/x-icon">
+  <link rel="icon" href="images/dentist_favicon_1.jpg'" type="image/x-icon">
 
   <!-- Include jQuery library -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -178,20 +177,20 @@
     });
   </script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,700,900" />
-  <link rel="stylesheet" href="{% static 'website/fonts/icomoon/style.css'%}" />
+  <link rel="stylesheet" href="fonts/icomoon/style.css" />
 
-  <link rel="stylesheet" href="{% static 'website/css/bootstrap.min.css'%}" />
-  <link rel="stylesheet" href="{% static 'website/css/magnific-popup.css'%}" />
-  <link rel="stylesheet" href="{% static 'website/css/jquery-ui.css'%}" />
-  <link rel="stylesheet" href="{% static 'website/css/owl.carousel.min.css'%}" />
-  <link rel="stylesheet" href="{% static 'website/css/owl.theme.default.min.css'%}" />
-  <link rel="stylesheet" href="{% static 'website/css/bootstrap-datepicker.css'%}" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/magnific-popup.css" />
+  <link rel="stylesheet" href="css/jquery-ui.css" />
+  <link rel="stylesheet" href="css/owl.carousel.min.css" />
+  <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+  <link rel="stylesheet" href="css/bootstrap-datepicker.css" />
 
-  <link rel="stylesheet" href="{% static 'website/fonts/flaticon/font/flaticon.css'%}" />
+  <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css" />
 
-  <link rel="stylesheet" href="{% static 'website/css/aos.css'%}" />
+  <link rel="stylesheet" href="css/aos.css" />
 
-  <link rel="stylesheet" href="{% static 'website/css/style.css'%}" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
@@ -257,7 +256,7 @@
           <div class="row align-items-center">
             <div class="col-2">
               <h2 class="mb-0 site-logo">
-                <a href="{% url 'home' %}">Shree Kalyan Dental Care</a>
+                <a href="home.html">Shree Kalyan Dental Care</a>
               </h2>
             </div>
             <div class="col-10">
@@ -269,13 +268,13 @@
                   </div>
 
                   <ul class="site-menu js-clone-nav d-none d-lg-block">
-                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="home.html">Home</a></li>
                     <!-- <li><a href="{% url 'home' %}#appointment-form">Book Appointment</a></li> -->
-                    <li><a href="{% url 'about' %}">About Us</a></li>
+                    <li><a href="about.html">About Us</a></li>
                     <!-- <li><a href="{% url 'patients' %}">Patients</a></li>                         -->
                     <!-- <li><a href="{% url 'news' %}">News</a></li> -->
-                    <li><a href="{% url 'services' %}">Services</a></li>
-                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                     <!-- <li><a href="{% url 'admin_login' %}">Admin Login</a></li> -->
                   </ul>
                 </div>
@@ -315,14 +314,14 @@
                     <li style="color: white;"><a href="{% url 'contact' %}">Contact Us</a></li>
                     <li><a href="#">Membership</a></li>
                   </ul> -->
-                <ul style="padding: 0;color: #DCDCDC;">
-                  <li><a href="{% url 'home' %}" style="color: #DCDCDC;">Home</a></li>
-                  <li><a href="{% url 'services' %}" style="color: #DCDCDC;">Services</a></li>
+                <ul style="padding: 0;color: #DCDCDC; list-style: none;">
+                  <li><a href="home.html" style="color: #DCDCDC;">Home</a></li>
+                  <li><a href="services.html" style="color: #DCDCDC;">Services</a></li>
                   <li><a
                       href="https://www.google.com/maps/place/Shree+Kalyan+Dental+Care/@21.225269,81.6557681,17z/data=!3m1!4b1!4m6!3m5!1s0x3a28dd1ccb5aa133:0xe67136b0370e4114!8m2!3d21.225269!4d81.658343!16s%2Fg%2F11tfs_ksgj?entry=ttu"
                       style="color: #DCDCDC;">Google Maps Link</a></li>
-                  <li><a href="{% url 'about' %}" style="color: #DCDCDC;">About Us</a></li>
-                  <li><a href="{% url 'contact' %}" style="color: #DCDCDC;">Contact Us</a></li>
+                  <li><a href="about.html" style="color: #DCDCDC;">About Us</a></li>
+                  <li><a href="contact.html" style="color: #DCDCDC;">Contact Us</a></li>
                 </ul>
               </div>
             </div>
@@ -413,7 +412,7 @@
                       <li>MONDAY - SATURDAY(SUNDAY CLOSED)</li>
                       <li>10.30 AM - 7.00 PM</li>
                     </ul> -->
-                <ul style="padding: 0;">
+                <ul style="padding: 0; list-style: none;">
                   <li style="color: #DCDCDC;"><strong>SHREE KALYAN DENTAL CARE,</strong><br>
                     SHOP NO.44, RDA COMPLEX,<br>
                     NEW RAJENDRA NAGAR, RAIPUR (C.G.)<br>
@@ -453,8 +452,9 @@
                   <a href="https://www.facebook.com/profile.php?id=100077932892889&mibextid=2JQ9oc" class="pl-0 pr-3"
                     target="_blank" style="color: #DCDCDC;"><span class="icon-facebook"></span></a>
                   <!-- <a href="#" class="pl-3 pr-3"
-                      ><span class="icon-twitter"></span
-                    ></a> -->
+                      ><span class="icon-twitter"></span>
+                    </a>
+                     -->
                   <a href="https://instagram.com/shree.kalyan.dental.care?utm_source=qr&igshid=MzNlNGNkZWQ4Mg=="
                     class="pl-3 pr-3" target="_blank" style="color: #DCDCDC;"><span class="icon-instagram"></span></a>
                   <a href="https://www.linkedin.com/in/shailja-singh-6685a5235?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
@@ -468,17 +468,17 @@
     </footer>
   </div>
 
-  <script src="{% static 'website/js/jquery-migrate-3.0.1.min.js'%}"></script>
-  <script src="{% static 'website/js/jquery-ui.js'%}"></script>
-  <script src="{% static 'website/js/popper.min.js'%}"></script>
-  <script src="{% static 'website/js/bootstrap.min.js'%}"></script>
-  <script src="{% static 'website/js/owl.carousel.min.js'%}"></script>
-  <script src="{% static 'website/js/jquery.stellar.min.js'%}"></script>
-  <script src="{% static 'website/js/jquery.countdown.min.js'%}"></script>
-  <script src="{% static 'website/js/jquery.magnific-popup.min.js'%}"></script>
-  <script src="{% static 'website/js/bootstrap-datepicker.min.js'%}"></script>
-  <script src="{% static 'website/js/aos.js'%}"></script>
-  <script src="{% static 'website/js/main.js'%}"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/jquery.countdown.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/bootstrap-datepicker.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>
