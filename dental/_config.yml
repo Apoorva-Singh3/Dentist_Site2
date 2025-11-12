@@ -13,9 +13,17 @@ clinic_address: >-
 
 # Build settings
 markdown: kramdown
-theme: minima
+#theme: minima
 plugins:
   - jekyll-feed
+
+theme: null
+remote_theme: null
+
+include:
+  - _includes
+  - _layouts
+  - dental
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
